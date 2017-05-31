@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:baselineAligned="false"
+    android:isScrollContainer="false">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="#ffffff"
+        android:weightSum="1">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="365dp"
+            android:id="@+id/imageButton"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:src="@drawable/fondodomotica"
+            android:scaleType="center"
+            android:background="#ffffff"
+            android:longClickable="false" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbprogreso"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:indeterminate="false"
+            android:elevation="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="true"
+            android:indeterminateOnly="false"
+            android:animationResolution="@android:integer/config_longAnimTime"
+            android:backgroundTint="@color/accent_material_dark"
+            android:mirrorForRtl="false"
+            android:nestedScrollingEnabled="false"
+            android:progressTint="#0196d2"
+            android:progressBackgroundTint="#0196d2"
+            android:indeterminateTint="#0196d2"
+            android:longClickable="false"
+            android:foregroundTint="#0196d2"
+            android:foreground="#0196d2" />
+
+    </LinearLayout>
+</LinearLayout>

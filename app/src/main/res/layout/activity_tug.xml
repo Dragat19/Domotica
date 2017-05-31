@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vinilo3"
+    android:padding="20dp"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TV"
+        android:id="@+id/tv_tug"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:id="@+id/imageView_tv"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.50"
+        android:baselineAlignBottom="false"
+        android:src="@drawable/tvmed" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Apagado"
+        android:id="@+id/status"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <ToggleButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/toggleButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.10"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/toggle_sw"
+        android:textOff=""
+        android:textOn=""
+        android:checked="false"
+        android:contextClickable="false"
+        android:layout_marginBottom="20dp" />
+
+    <WebView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:id="@+id/web_tug"></WebView>
+
+</LinearLayout>

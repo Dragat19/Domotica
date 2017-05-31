@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Homtech</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="Menu">Menu Homtech</string>
+    <string name="Conf_Luminaria">Configuracion Luminaria</string>
+    <string name="Conf_Tug">Configuracion TUG</string>
+    <string name="Conf_dimmer">Configuracion Dimmer</string>
+    <string name="Conf_Aire">Configuracion A/A</string>
+</resources>

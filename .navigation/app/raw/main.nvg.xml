@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.SplashScreen"/>
+      <point      
+        x = "116"      
+        y = "6816"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.Tug"/>
+      <point      
+        x = "1836"      
+        y = "36"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.Control_Aire"/>
+      <point      
+        x = "120"      
+        y = "5392"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.Control_TUG"/>
+      <point      
+        x = "1900"      
+        y = "3376"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.Dimmer"/>
+      <point      
+        x = "512"      
+        y = "1524"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.Aire"/>
+      <point      
+        x = "1824"      
+        y = "1504"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.luminaria"/>
+      <point      
+        x = "516"      
+        y = "40"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.Control_luminaria"/>
+      <point      
+        x = "1904"      
+        y = "4796"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "ejemplo.domotica.MainActivity"/>
+      <point      
+        x = "500"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.MainActivity"/>
+      <point      
+        x = "148"      
+        y = "3924"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ejemplo.domotica.Control_Dimmer"/>
+      <point      
+        x = "1916"      
+        y = "6204"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

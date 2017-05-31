@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyActivity">
+
+    <item android:id="@+id/menu_Conf_lumi"
+        android:title="Conf.Luminaria"
+        android:orderInCategory="100"
+        app:showAsAction="collapseActionView" />
+
+    <item android:id="@+id/menu_tug"
+        android:title="Conf.ON/OFF TUG"
+        android:orderInCategory="100"
+        app:showAsAction="collapseActionView" />
+
+    <item android:id="@+id/menu_dimmer"
+        android:title="Conf.Dimmer"
+        android:orderInCategory="100"
+        app:showAsAction="collapseActionView" />
+
+    <item android:id="@+id/menu_Conf_aire"
+        android:title="Conf.A/A"
+        android:orderInCategory="100"
+        app:showAsAction="collapseActionView" />
+
+    <item android:id="@+id/menu_info"
+        android:title="Acerca de:"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+
+</menu>

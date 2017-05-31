@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="¿Quieres configurar tu dispositivo TUG?"
+        android:id="@+id/textView2"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Configuralo aqui:"
+        android:id="@+id/textView3"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Conectar"
+                android:id="@+id/btn_Conectar2"
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimary"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID:"
+                android:textSize="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <EditText
+                android:id="@+id/edit_id1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Escribe nombre del Dispositivo"
+                android:textSize="17dp"
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark">
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IP:"
+                android:textSize="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <EditText
+                android:id="@+id/edit_ip1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="Escribe direccion IP"
+                android:textSize="17dp"
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipos de Cargas:"
+                android:textSize="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cafetera"
+                android:id="@+id/radioBtn1"
+                android:checked="false"
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Microondas"
+                android:id="@+id/radioBtn2"
+                android:checked="false"
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TV"
+                android:id="@+id/radioBtn3"
+                android:checked="false"
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Otros"
+                android:id="@+id/radioBtn4"
+                android:checked="false"
+                />
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardar Datos"
+                android:id="@+id/btn_Guardar2"
+                android:textColor="#ffffff"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

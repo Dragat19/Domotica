@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="¿Quieres saber acerca del Desarrollador de esta App?"
+        android:id="@+id/textView2"
+        android:textColor="@color/colorPrimaryDark"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Contactalo aqui:"
+        android:id="@+id/textView3"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="10dp"
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Developer Android: Albert Sanchez"
+            android:textSize="17sp"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tlf: +54 1135968008"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo: Ing.albert.sanchez91@gmail.com"
+            android:textColor="@color/colorPrimary"
+            android:textSize="17sp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+</LinearLayout>
