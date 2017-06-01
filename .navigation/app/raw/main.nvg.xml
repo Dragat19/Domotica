@@ -14,7 +14,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "ejemplo.domotica.Tug"/>
+        className = "ejemplo.domotica.Config_Equipos.Config_Tug"/>
       <point      
         x = "1836"      
         y = "36"/>
@@ -22,7 +22,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "ejemplo.domotica.Control_Aire"/>
+        className = "ejemplo.domotica.Control_Equipos.Control_Aire"/>
       <point      
         x = "120"      
         y = "5392"/>
@@ -30,7 +30,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "ejemplo.domotica.Control_TUG"/>
+        className = "ejemplo.domotica.Control_Equipos.Control_TUG"/>
       <point      
         x = "1900"      
         y = "3376"/>
@@ -38,7 +38,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "ejemplo.domotica.Dimmer"/>
+        className = "ejemplo.domotica.Config_Equipos.Config_Dimmer"/>
       <point      
         x = "512"      
         y = "1524"/>
@@ -46,7 +46,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "ejemplo.domotica.Aire"/>
+        className = "ejemplo.domotica.Config_Equipos.Config_Aire"/>
       <point      
         x = "1824"      
         y = "1504"/>
@@ -54,7 +54,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "ejemplo.domotica.luminaria"/>
+        className = "ejemplo.domotica.Config_Equipos.Config_Luminaria"/>
       <point      
         x = "516"      
         y = "40"/>
@@ -62,7 +62,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "ejemplo.domotica.Control_luminaria"/>
+        className = "ejemplo.domotica.Control_Equipos.Control_luminaria"/>
       <point      
         x = "1904"      
         y = "4796"/>
@@ -86,7 +86,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "ejemplo.domotica.Control_Dimmer"/>
+        className = "ejemplo.domotica.Control_Equipos.Control_Dimmer"/>
       <point      
         x = "1916"      
         y = "6204"/>

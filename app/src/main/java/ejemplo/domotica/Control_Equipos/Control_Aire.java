@@ -1,4 +1,4 @@
-package ejemplo.domotica;
+package ejemplo.domotica.Control_Equipos;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -7,6 +7,8 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import ejemplo.domotica.R;
 
 /**
  * Created by levaa_000 on 12/14/2015.

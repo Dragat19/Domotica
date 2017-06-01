@@ -1,4 +1,4 @@
-package ejemplo.domotica;
+package ejemplo.domotica.Config_Equipos;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,15 +9,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
-import android.widget.ToggleButton;
+
+import ejemplo.domotica.Control_Equipos.Control_Dimmer;
+import ejemplo.domotica.R;
 
 /**
  * Created by levaa_000 on 12/12/2015.
  */
-public class Dimmer extends AppCompatActivity {
-
+public class Config_Dimmer extends AppCompatActivity {
+    public static final String NAME_PREF = "PreferenciasUsuario";
+    public static final String ID_DIMMER = "NombreDisp_Dimmer";
+    public static final String IP_DIMMER = "Ipdimmer";
     private Button Guardar_dimmer , Conectar_dimmer;
     private EditText ID_dimmer,IP_dimmer;
 
@@ -38,7 +41,6 @@ public class Dimmer extends AppCompatActivity {
         Guardar_dimmer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 GuardarPreferencia();
             }
         });
@@ -48,12 +50,12 @@ public class Dimmer extends AppCompatActivity {
             public void onClick(View v) {
                 String aux_ipdim= IP_dimmer.getText().toString();
                 String aux_iddim= ID_dimmer.getText().toString();
-                /*Para pasar del layaout MainActivity a otro */
+
                 if(aux_ipdim.matches("192.168.4.1") && !aux_iddim.matches("")) {
-                Intent nuevoform = new Intent(Dimmer.this, Control_Dimmer.class);
-                    nuevoform.putExtra("Ipdimmer", aux_ipdim);
-                    nuevoform.putExtra("NombreDisp_Dimmer", aux_iddim);
-                    startActivity(nuevoform);
+                Intent intent = new Intent(Config_Dimmer.this, Control_Dimmer.class);
+                    intent.putExtra(ID_DIMMER, aux_ipdim);
+                    intent.putExtra(IP_DIMMER, aux_iddim);
+                    startActivity(intent);
                 }else{
                     Toast.makeText(getApplicationContext(), "Faltan datos", Toast.LENGTH_SHORT).show();
                 }
@@ -65,15 +67,15 @@ public class Dimmer extends AppCompatActivity {
 
     public void CargarPreferencia()
     {
-        SharedPreferences mispreferencias=getSharedPreferences("PreferenciasUsuario", Context.MODE_MULTI_PROCESS);
-        ID_dimmer.setText(mispreferencias.getString("NombreDisp_Dimmer", ""));
-        IP_dimmer.setText(mispreferencias.getString("Ipdimmer", ""));
+        SharedPreferences mispreferencias=getSharedPreferences(NAME_PREF, Context.MODE_MULTI_PROCESS);
+        ID_dimmer.setText(mispreferencias.getString( ID_DIMMER, ""));
+        IP_dimmer.setText(mispreferencias.getString(IP_DIMMER, ""));
 
     }
 
     public void GuardarPreferencia()
     {
-        SharedPreferences mispreferencias=getSharedPreferences("PreferenciasUsuario", Context.MODE_MULTI_PROCESS);
+        SharedPreferences mispreferencias=getSharedPreferences(NAME_PREF, Context.MODE_MULTI_PROCESS);
         SharedPreferences.Editor editor=mispreferencias.edit();
         String NombreDisp_dimmer= ID_dimmer.getText().toString();
         String Ipdimer= IP_dimmer.getText().toString();
@@ -84,8 +86,8 @@ public class Dimmer extends AppCompatActivity {
         }else {
 
             Toast.makeText(this, "Datos Guardado", Toast.LENGTH_SHORT).show();
-            editor.putString("NombreDisp_Dimmer", NombreDisp_dimmer);
-            editor.putString("Ipdimmer", Ipdimer);
+            editor.putString(ID_DIMMER, NombreDisp_dimmer);
+            editor.putString(IP_DIMMER, Ipdimer);
             editor.commit();
         }
     }

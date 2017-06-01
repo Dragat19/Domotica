@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="¿Quieres saber acerca del Desarrollador de esta App?"
+        android:text="@string/acerca_de_msg1"
         android:id="@+id/textView2"
         android:textColor="@color/colorPrimaryDark"
         />
@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Contactalo aqui:"
+        android:text="@string/acerca_de_msg2"
         android:id="@+id/textView3"
         android:textColor="@color/colorPrimaryDark"
         android:layout_marginBottom="10dp"
@@ -35,7 +35,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Developer Android: Albert Sanchez"
+            android:text="@string/acerca_de_info_developer1"
             android:textSize="17sp"
             android:textColor="@color/colorPrimary"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -45,7 +45,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tlf: +54 1135968008"
+            android:text="@string/acerca_de_info_developer2"
             android:textColor="@color/colorPrimary"
             android:textSize="17sp"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -54,7 +54,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Correo: Ing.albert.sanchez91@gmail.com"
+            android:text="@string/acerca_de_info_developer3"
             android:textColor="@color/colorPrimary"
             android:textSize="17sp"
             android:textAppearance="?android:attr/textAppearanceLarge"

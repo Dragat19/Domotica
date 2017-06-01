@@ -24,7 +24,7 @@
             android:label="@string/Menu" >
         </activity>
         <activity
-            android:name=".luminaria"
+            android:name=".Config_Equipos.Config_Luminaria"
             android:label="@string/Conf_Luminaria"
             android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="stateHidden">
@@ -33,7 +33,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".Tug"
+            android:name=".Config_Equipos.Config_Tug"
             android:label="@string/Conf_Tug"
             android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="stateHidden">
@@ -42,7 +42,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".Dimmer"
+            android:name=".Config_Equipos.Config_Dimmer"
             android:label="@string/Conf_dimmer"
             android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="stateHidden">
@@ -51,7 +51,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".Aire"
+            android:name=".Config_Equipos.Config_Aire"
             android:label="@string/Conf_Aire"
             android:parentActivityName=".MainActivity"
             android:windowSoftInputMode="stateHidden">
@@ -60,7 +60,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".Control_luminaria"
+            android:name=".Control_Equipos.Control_luminaria"
             android:label="Control Luminaria"
             android:parentActivityName=".MainActivity" >
             <meta-data
@@ -68,7 +68,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".Control_TUG"
+            android:name=".Control_Equipos.Control_TUG"
             android:label="Control TUG"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -76,7 +76,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".Control_Dimmer"
+            android:name=".Control_Equipos.Control_Dimmer"
             android:label="Control Dimmer"
             android:parentActivityName=".MainActivity">
             <meta-data
@@ -84,7 +84,7 @@
                 android:value=".MainActivity"/>
         </activity>
         <activity
-            android:name=".Control_Aire"
+            android:name=".Control_Equipos.Control_Aire"
             android:label="Control A/A"
             android:parentActivityName=".MainActivity">
             <meta-data

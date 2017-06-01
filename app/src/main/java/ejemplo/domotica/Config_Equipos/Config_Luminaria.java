@@ -1,4 +1,4 @@
-package ejemplo.domotica;
+package ejemplo.domotica.Config_Equipos;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,16 +7,25 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Toast;
+
+import ejemplo.domotica.Control_Equipos.Control_luminaria;
+import ejemplo.domotica.R;
 
 /**
  * Created by levaa_000 on 12/11/2015.
  */
-public class luminaria extends AppCompatActivity {
+public class Config_Luminaria extends AppCompatActivity {
+
+    public static final String NAME_PREF = "PreferenciasUsuario";
+    public static final String ID_LUMI = "NombreDisp_Lumi";
+    public static final String IP_LUMI = "IpLuminaria";
+    public static final String LUMI1 = "Ubicacion1";
+    public static final String LUMI2 = "Ubicacion2";
+    public static final String LUMI3 = "Ubicacion3";
+    public static final String LUMI4 = "Ubicacion4";
     private Button Guardar_lumi , Conectar_lumi;
     private EditText ID_lumi,IP_lumi,Ubic1,Ubic2,Ubic3,Ubic4;
 
@@ -49,27 +58,30 @@ public class luminaria extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /*Para pasar del layaout MainActivity a otro */
-                Intent nuevoform = new Intent(luminaria.this, Control_luminaria.class);
-                startActivity(nuevoform);
+                Intent intent = new Intent(Config_Luminaria.this, Control_luminaria.class);
+                intent.putExtra(LUMI1,Ubic1.getText().toString());
+                intent.putExtra(LUMI2,Ubic2.getText().toString());
+                intent.putExtra(LUMI3,Ubic3.getText().toString());
+                intent.putExtra(LUMI4,Ubic4.getText().toString());
+                startActivity(intent);
             }
         });
     }
 
     public void CargarPreferencia()
     {
-        SharedPreferences mispreferencias=getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
-        ID_lumi.setText(mispreferencias.getString("NombreDisp_Lumi",""));
-        IP_lumi.setText(mispreferencias.getString("IpLuminaria", ""));
-        Ubic1.setText(mispreferencias.getString("Ubicacion1", ""));
-        Ubic2.setText(mispreferencias.getString("Ubicacion2",""));
-        Ubic3.setText(mispreferencias.getString("Ubicacion3",""));
-        Ubic4.setText(mispreferencias.getString("Ubicacion4", ""));
+        SharedPreferences mispreferencias=getSharedPreferences(NAME_PREF, Context.MODE_PRIVATE);
+        ID_lumi.setText(mispreferencias.getString(ID_LUMI,""));
+        IP_lumi.setText(mispreferencias.getString(IP_LUMI, ""));
+        Ubic1.setText(mispreferencias.getString(LUMI1, ""));
+        Ubic2.setText(mispreferencias.getString(LUMI2,""));
+        Ubic3.setText(mispreferencias.getString(LUMI3,""));
+        Ubic4.setText(mispreferencias.getString(LUMI4, ""));
 
     }
      public void GuardarPreferencia()
      {
-         SharedPreferences mispreferencias=getSharedPreferences("PreferenciasUsuario", Context.MODE_PRIVATE);
+         SharedPreferences mispreferencias=getSharedPreferences(NAME_PREF, Context.MODE_PRIVATE);
          SharedPreferences.Editor editor=mispreferencias.edit();
          String NombreDisp= ID_lumi.getText().toString();
          String IpLuminaria= IP_lumi.getText().toString();
@@ -84,12 +96,12 @@ public class luminaria extends AppCompatActivity {
 
          }else {
              Toast.makeText(this, "Datos Guardado", Toast.LENGTH_SHORT).show();
-             editor.putString("NombreDisp_Lumi", NombreDisp);
-             editor.putString("IpLuminaria", IpLuminaria);
-             editor.putString("Ubicacion1", Ubicacion1);
-             editor.putString("Ubicacion2", Ubicacion2);
-             editor.putString("Ubicacion3", Ubicacion3);
-             editor.putString("Ubicacion4", Ubicacion4);
+             editor.putString(ID_LUMI, NombreDisp);
+             editor.putString(IP_LUMI, IpLuminaria);
+             editor.putString(LUMI1, Ubicacion1);
+             editor.putString(LUMI2, Ubicacion2);
+             editor.putString(LUMI3, Ubicacion3);
+             editor.putString(LUMI4, Ubicacion4);
              editor.commit();
          }
 

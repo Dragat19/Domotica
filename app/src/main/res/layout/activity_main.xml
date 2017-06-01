@@ -23,34 +23,26 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="false"
         android:layout_marginTop="5dp"
-        android:id="@+id/linearLayout"
-        android:layout_alignParentStart="false">
+        android:id="@+id/linearLayout">
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btntug"
-            android:drawableStart="@drawable/btntug" />
+            android:src="@drawable/btntug" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="ON/OFF TUG"
+            android:text="@string/menu_tug"
             android:id="@+id/textView"
             android:layout_marginLeft="30dp"
-            android:textSize="20dp"
-            android:textIsSelectable="false"
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"
             android:textColor="#263238"
-            android:textStyle="normal|bold"
-            android:autoText="false"
-            android:contextClickable="false"
-            android:focusableInTouchMode="false"
-            android:singleLine="true"
-            android:elegantTextHeight="false"
-             />
+            android:textStyle="normal|bold" />
 
     </LinearLayout>
 
@@ -64,27 +56,25 @@
         android:layout_marginTop="5dp"
         android:id="@+id/linearLayout2">
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnluminaria"
-            android:drawableStart="@drawable/btnbombillo"
+            android:src="@drawable/btnbombillo"
             android:nestedScrollingEnabled="true"
             android:onClick="HOLA" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="LUMINARIA"
-            android:id="@+id/textView2"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="30dp"
-            android:textSize="20dp"
-            android:textIsSelectable="true"
+            android:text="@string/menu_luminaria"
             android:textColor="#263238"
-            android:textStyle="normal|bold"
-             />
+            android:textSize="20sp"
+            android:textStyle="normal|bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -97,52 +87,49 @@
         android:layout_marginTop="5dp"
         android:id="@+id/linearLayout3">
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btndimmer"
-            android:drawableStart="@drawable/btndimer" />
+            android:src="@drawable/btndimer" />
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="DIMMER"
-            android:id="@+id/textView3"
             android:layout_marginLeft="30dp"
-            android:textSize="20dp"
-            android:textIsSelectable="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/menu_dimmer"
             android:textColor="#263238"
-            android:textStyle="normal|bold"
-             />
+            android:textSize="20sp"
+            android:textStyle="normal|bold" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="8dp">
 
-        <Button
+        <ImageButton
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnaire"
-            android:drawableStart="@drawable/btnaire" />
+            android:src="@drawable/btnaire" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="A/A"
+            android:text="@string/menu_aire"
             android:id="@+id/textView5"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="30dp"
-            android:textSize="20dp"
-            android:textIsSelectable="true"
+            android:textSize="20sp"
             android:textColor="#263238"
             android:textStyle="normal|bold" />
 

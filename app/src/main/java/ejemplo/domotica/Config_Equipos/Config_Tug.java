@@ -1,4 +1,4 @@
-package ejemplo.domotica;
+package ejemplo.domotica.Config_Equipos;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,10 +12,13 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import ejemplo.domotica.Control_Equipos.Control_TUG;
+import ejemplo.domotica.R;
+
 /**
  * Created by levaa_000 on 12/11/2015.
  */
-public class Tug extends AppCompatActivity {
+public class Config_Tug extends AppCompatActivity {
 
     private Button Guardar_tug, Conectar_tug;
     private EditText ID_tug;
@@ -52,12 +55,12 @@ public class Tug extends AppCompatActivity {
             public void onClick(View v) {
                 String aux_ip= IP_tug.getText().toString();
                 String aux_id= ID_tug.getText().toString();
-                /*Para pasar del layaout MainActivity a otro */
                 if(!aux_ip.matches("") && !aux_id.matches("")) {
-                    Intent nuevoform = new Intent(Tug.this, Control_TUG.class);
-                    nuevoform.putExtra("IpTUG", aux_ip);
-                    nuevoform.putExtra("NombreDisp", aux_id);
-                    startActivity(nuevoform);
+                    Intent intent = new Intent(Config_Tug.this, Control_TUG.class);
+                    intent.putExtra("IpTUG", aux_ip);
+                    intent.putExtra("NombreDisp", aux_id);
+                    startActivity(intent);
+                    finish();
                 }else{
                     Toast.makeText(getApplicationContext(), "Faltan datos", Toast.LENGTH_SHORT).show();
                 }
@@ -89,7 +92,6 @@ public class Tug extends AppCompatActivity {
         boolean Otros= CheckBtn4.isChecked();
 
         if( NombreDisp.length()==0 || IpTUG.length()==0) {
-
             Toast.makeText(this, "Faltan Datos", Toast.LENGTH_LONG).show();
         }else {
             Toast.makeText(this, "Datos Guardado", Toast.LENGTH_SHORT).show();

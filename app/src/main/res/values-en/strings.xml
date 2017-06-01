@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Strings Name App y ActionBar -->
+    <string name="app_name">Homtech</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="Menu">Menu Homtech</string>
+    <string name="Conf_Luminaria">Lighting Settings</string>
+    <string name="Conf_Tug">TUG Configuration</string>
+    <string name="Conf_dimmer">Dimmer Configuration</string>
+    <string name="Conf_Aire">A/A Configuration</string>
+
+    <!--String Titulos Equipos -->
+    <string name="title_aire">Air Conditioner</string>
+    <string name="title_luminaria">Lighting</string>
+    <string name="title_dimmer">Dimmer</string>
+    <string name="title_tug">Power Outlets</string>
+
+    <!--String Menu -->
+    <string name="menu_tug">POWER OUTLETS</string>
+    <string name="menu_luminaria">LIGHTING</string>
+    <string name="menu_dimmer">DIMMER</string>
+    <string name="menu_aire">A/A</string>
+
+    <!--String General Configuracion Equipos -->
+    <string name="conf_txt_btn1">Connect</string>
+    <string name="conf_txt_btn2">Save data</string>
+    <string name="conf_id">ID:</string>
+    <string name="conf_ip">IP:</string>
+    <string name="conf_etxt1">Enter device name</string>
+    <string name="conf_etxt2">Write IP address</string>
+    <string name="conf_msg2">Set up here:</string>
+
+    <!-- String Configuracion Equipos -->
+    <string name="conf_aire_msg1">Do you want to configure your A/A device ?</string>
+    <string name="config_dimmer_msg1">Do you want to configure your Dimmer device ?</string>
+    <string name="conf_lum_msg1">Do you want to configure your luminaire devices ?</string>
+    <string name="conf_lum_title">Location of luminaires:</string>
+    <string name="conf_lum_etxt1">Write location 1</string>
+    <string name="conf_lum_etxt2">Write location 2</string>
+    <string name="conf_lum_etxt3">Write location 3</string>
+    <string name="conf_lum_etxt4">Write location 4</string>
+    <string name="conf_tug_msg1">Do you want to configure your TUG device ?</string>
+    <string name="conf_tug_title">Types of loads:</string>
+    <string name="conf_tug_chk1">Coffee maker</string>
+    <string name="conf_tug_chk2">Microwave</string>
+    <string name="conf_tug_chk3">TV</string>
+    <string name="conf_tug_chk4">Others</string>
+
+    <!-- String Informacion del Desarrollador -->
+    <string name="acerca_de_msg1">Do you want to know about the Developer of this App ?</string>
+    <string name="acerca_de_msg2">Contact us here:</string>
+    <string name="acerca_de_info_developer1">Developer Android: Albert Sanchez</string>
+    <string name="acerca_de_info_developer2">Tlf: +54 1135968008</string>
+    <string name="acerca_de_info_developer3">Correo: Ing.albert.sanchez91@gmail.com</string>
+</resources>

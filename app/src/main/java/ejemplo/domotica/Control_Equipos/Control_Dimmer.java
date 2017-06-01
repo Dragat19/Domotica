@@ -1,4 +1,4 @@
-package ejemplo.domotica;
+package ejemplo.domotica.Control_Equipos;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -10,6 +10,11 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.ToggleButton;
+
+import ejemplo.domotica.R;
+
+import static ejemplo.domotica.Config_Equipos.Config_Dimmer.ID_DIMMER;
+import static ejemplo.domotica.Config_Equipos.Config_Dimmer.IP_DIMMER;
 
 /**
  * Created by levaa_000 on 12/14/2015.
@@ -41,9 +46,8 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
 
         Barra.setOnSeekBarChangeListener(this);
 
-        Bundle extras = getIntent().getExtras();
-        final String ipx = extras.getString("Ipdimmer");
-        String idx = extras.getString("NombreDisp_Dimmer");
+        final String ipx = getIntent().getStringExtra(ID_DIMMER);
+        String idx = getIntent().getStringExtra(IP_DIMMER);
 
         Nombre_dimmer.setText(idx);
         Progreso.setText(ipx);
@@ -62,7 +66,6 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 String Encendido, Apagado;
-
 
                 if (isChecked) {
                     texto_Extra.setText("Encendido");

@@ -1,4 +1,4 @@
-package ejemplo.domotica;
+package ejemplo.domotica.Control_Equipos;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import ejemplo.domotica.R;
 
 /**
  * Created by levaa_000 on 12/14/2015.
@@ -38,13 +40,11 @@ public class Control_TUG extends AppCompatActivity {
         String id = extras.getString("NombreDisp");
         final String xip = extras.getString("IpTUG");
 
-
         Nombre_tug.setText(id);
         Status.setText(xip);
 
-
+        // evita que los enlaces se abran fuera nuestra app en el navegador de android
         Web_tug.setWebViewClient(new WebViewClient() {
-            // evita que los enlaces se abran fuera nuestra app en el navegador de android
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String Status) {
                 return false;

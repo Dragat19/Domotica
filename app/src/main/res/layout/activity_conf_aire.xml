@@ -5,15 +5,13 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:layout_margin="10dp"
-
-    >
+    android:layout_margin="10dp">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="¿Quieres configurar tu dispositivo A/A?"
+        android:text="@string/conf_aire_msg1"
         android:id="@+id/textView2"
         android:textColor="@color/colorPrimaryDark"
         />
@@ -22,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Configuralo aqui:"
+        android:text="@string/conf_msg2"
         android:id="@+id/textView3"
         android:textColor="@color/colorPrimaryDark"
         android:layout_marginBottom="10dp"
@@ -42,7 +40,7 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Conectar"
+                android:text="@string/conf_txt_btn1"
                 android:id="@+id/btn_Conectar4"
                 android:textColor="#ffffff"
                 android:background="@color/colorPrimary"
@@ -52,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID:"
+                android:text="@string/conf_id"
                 android:textSize="20dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_marginTop="20dp"
@@ -63,7 +61,7 @@
                 android:id="@+id/edit_id4"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:hint="Escribe nombre del Dispositivo"
+                android:hint="@string/conf_etxt1"
                 android:textSize="17dp"
                 android:textColorHint="@color/colorPrimary"
                 android:textColor="@color/colorPrimaryDark">
@@ -72,7 +70,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="IP:"
+                android:text="@string/conf_ip"
                 android:textSize="20dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_marginTop="10dp"
@@ -83,7 +81,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="top"
-                android:hint="Escribe direccion IP"
+                android:hint="@string/conf_etxt2"
                 android:textSize="17dp"
                 android:textColorHint="@color/colorPrimary"
                 android:textColor="@color/colorPrimaryDark"
@@ -93,7 +91,7 @@
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Guardar Datos"
+                android:text="@string/conf_txt_btn2"
                 android:id="@+id/btn_GuardarAire"
                 android:textColor="#ffffff"
                 android:background="@color/colorPrimary"

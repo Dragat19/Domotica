@@ -1,58 +1,87 @@
 package ejemplo.domotica;
 
 import android.app.AlertDialog;
-import android.app.backup.SharedPreferencesBackupHelper;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.ImageButton;
+
+import ejemplo.domotica.Config_Equipos.Config_Aire;
+import ejemplo.domotica.Config_Equipos.Config_Dimmer;
+import ejemplo.domotica.Config_Equipos.Config_Luminaria;
+import ejemplo.domotica.Config_Equipos.Config_Tug;
+import ejemplo.domotica.Control_Equipos.Control_Aire;
+import ejemplo.domotica.Control_Equipos.Control_Dimmer;
+import ejemplo.domotica.Control_Equipos.Control_TUG;
+import ejemplo.domotica.Control_Equipos.Control_luminaria;
 
 public class MainActivity extends AppCompatActivity {
-    private Button luminaria, tug,dimmer, aire;
+    private ImageButton luminaria, tug,dimmer, aire;
+    private PrefManager prefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        luminaria = (Button) findViewById(R.id.btnluminaria);
-        tug = (Button) findViewById(R.id.btntug);
-        dimmer = (Button) findViewById(R.id.btndimmer);
-        aire = (Button) findViewById(R.id.btnaire);
+        luminaria = (ImageButton) findViewById(R.id.btnluminaria);
+        tug = (ImageButton) findViewById(R.id.btntug);
+        dimmer = (ImageButton) findViewById(R.id.btndimmer);
+        aire = (ImageButton) findViewById(R.id.btnaire);
+
+        prefManager = new PrefManager(this);
 
         tug.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nuevoform = new Intent(MainActivity.this, Tug.class);
-                startActivity(nuevoform);
-
+                if (prefManager.isFirstTug() == false){
+                    prefManager.setFirstTug(false);
+                    startActivity(new Intent(MainActivity.this, Control_TUG.class));
+                }else {
+                    prefManager.setFirstTug(false);
+                    startActivity(new Intent(MainActivity.this, Config_Tug.class));
+                }
             }
         });
 
         luminaria.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, luminaria.class));
+                if (prefManager.isFirstLumi() == false){
+                    prefManager.setFirstLumi(false);
+                    startActivity(new Intent(MainActivity.this, Control_luminaria.class));
+                }else {
+                    prefManager.setFirstLumi(false);
+                    startActivity(new Intent(MainActivity.this, Config_Luminaria.class));
+                }
             }
         });
         dimmer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Dimmer.class));
+                if (prefManager.isFirstDimmer() == false){
+                    prefManager.setFirstDimmer(false);
+                    startActivity(new Intent(MainActivity.this, Control_Dimmer.class));
+                }else {
+                    prefManager.setFirstDimmer(false);
+                    startActivity(new Intent(MainActivity.this, Config_Dimmer.class));
+                }
             }
         });
+
         aire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Aire.class));
+                if (prefManager.isFirstTimeAire()== false){
+                    prefManager.setFirstAire(false);
+                    startActivity(new Intent(MainActivity.this, Control_Aire.class));
+                }else {
+                    prefManager.setFirstAire(false);
+                    startActivity(new Intent(MainActivity.this, Config_Aire.class));
+                }
             }
         });
 
@@ -71,20 +100,20 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
 
             case R.id.menu_Conf_lumi:
-
+                startActivity(new Intent(MainActivity.this, Config_Luminaria.class));
                 break;
 
             case R.id.menu_tug:
-
+                startActivity(new Intent(MainActivity.this, Config_Tug.class));
                 break;
 
 
             case R.id.menu_dimmer:
-
+                startActivity(new Intent(MainActivity.this, Config_Dimmer.class));
                 break;
 
             case R.id.menu_Conf_aire:
-
+                startActivity(new Intent(MainActivity.this, Config_Aire.class));
                 break;
 
             case R.id.menu_info:
@@ -93,7 +122,6 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setView(dialoglayout);
                 builder.show();
-
                 break;
         }
 
