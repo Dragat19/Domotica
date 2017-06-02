@@ -3,10 +3,12 @@ package ejemplo.domotica.Control_Equipos;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.CompoundButton;
@@ -14,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import ejemplo.domotica.Config_Equipos.Config_Aire;
+import ejemplo.domotica.Config_Equipos.Config_Tug;
 import ejemplo.domotica.R;
 
 import static ejemplo.domotica.Config_Equipos.Config_Aire.ID;
@@ -37,7 +41,7 @@ public class Control_Aire extends AppCompatActivity implements Animation.Animati
         Sw_aire=(ToggleButton)findViewById(R.id.toggleButton1);
         Status1=(TextView)findViewById(R.id.status1);
         aire=(ImageView)findViewById(R.id.imageView_aire);
-        settings = (ImageView)findViewById(R.id.settigs);
+        settings = (ImageView)findViewById(R.id.settings4);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -62,6 +66,15 @@ public class Control_Aire extends AppCompatActivity implements Animation.Animati
                 } else {
                     Status1.setText("Apagado");
                 }
+            }
+        });
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Control_Aire.this, Config_Aire.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

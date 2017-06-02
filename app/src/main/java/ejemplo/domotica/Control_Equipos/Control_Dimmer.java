@@ -3,10 +3,12 @@ package ejemplo.domotica.Control_Equipos;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.webkit.WebView;
@@ -17,6 +19,8 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import ejemplo.domotica.Config_Equipos.Config_Dimmer;
+import ejemplo.domotica.Config_Equipos.Config_Luminaria;
 import ejemplo.domotica.R;
 
 import static ejemplo.domotica.Config_Equipos.Config_Dimmer.ID_DIMMER;
@@ -47,7 +51,7 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
         texto_Extra=(TextView)findViewById(R.id.textV_extra);
         Nombre_dimmer=(TextView)findViewById(R.id.txt_nombre);
         Imag_dimmer=(ImageView)findViewById(R.id.imageView_dimmer);
-        settings=(ImageView)findViewById(R.id.settigs);
+        settings=(ImageView)findViewById(R.id.settings3);
         Web_dimmer=(WebView)findViewById(R.id.webView_dimmer);
         toggle_btnon_off=(ToggleButton)findViewById(R.id.toggleBtn);
 
@@ -104,6 +108,16 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
             showDialog(this);
         }
 
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Control_Dimmer.this, Config_Dimmer.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
 
     }
 
@@ -113,6 +127,8 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
 
         progress= progress*10;
         String Nvl_1,Nvl_2,Nvl_3,Nvl_4,Nvl_5,Nvl_6,Nvl_7,Nvl_8,Nvl_9,Nvl_10,Nvl_11;
+
+
 
         if(progress == 0){
 

@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.CompoundButton;
@@ -17,6 +18,8 @@ import android.widget.Switch;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 
+import ejemplo.domotica.Config_Equipos.Config_Aire;
+import ejemplo.domotica.Config_Equipos.Config_Luminaria;
 import ejemplo.domotica.R;
 
 import static ejemplo.domotica.Config_Equipos.Config_Luminaria.ID_LUMI;
@@ -54,7 +57,7 @@ public class Control_luminaria extends AppCompatActivity implements Animation.An
         img2=(ImageView)findViewById(R.id.imageView2);
         img3=(ImageView)findViewById(R.id.imageView3);
         img4=(ImageView)findViewById(R.id.imageView4);
-        setting = (ImageView)findViewById(R.id.settigs);
+        setting = (ImageView)findViewById(R.id.settings2);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -150,6 +153,15 @@ public class Control_luminaria extends AppCompatActivity implements Animation.An
                     img4.setImageResource(R.drawable.off);
                     sw4.setText("OFF");
                 }
+            }
+        });
+
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Control_luminaria.this, Config_Luminaria.class);
+                startActivity(intent);
+                finish();
             }
         });
 
