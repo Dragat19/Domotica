@@ -1,5 +1,6 @@
 package ejemplo.domotica.Control_Equipos;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -15,17 +16,19 @@ import ejemplo.domotica.R;
 
 import static ejemplo.domotica.Config_Equipos.Config_Dimmer.ID_DIMMER;
 import static ejemplo.domotica.Config_Equipos.Config_Dimmer.IP_DIMMER;
+import static ejemplo.domotica.Config_Equipos.Config_Dimmer.NAME_PREF;
 
 /**
  * Created by levaa_000 on 12/14/2015.
  */
 public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
 
-    SeekBar Barra;
-    TextView Progreso,Nombre_dimmer,texto_Extra;
-    ImageView Imag_dimmer;
-    WebView Web_dimmer;
-    ToggleButton toggle_btnon_off;
+    private SeekBar Barra;
+    private TextView Progreso,Nombre_dimmer,texto_Extra;
+    private ImageView Imag_dimmer;
+    private WebView Web_dimmer;
+    private ToggleButton toggle_btnon_off;
+    private SharedPreferences pref;
 
    
     @Override
@@ -46,8 +49,9 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
 
         Barra.setOnSeekBarChangeListener(this);
 
-        final String ipx = getIntent().getStringExtra(ID_DIMMER);
-        String idx = getIntent().getStringExtra(IP_DIMMER);
+        pref = getSharedPreferences(NAME_PREF,0);
+        final String ipx =pref.getString(IP_DIMMER,"");
+        String idx = pref.getString(ID_DIMMER,"");
 
         Nombre_dimmer.setText(idx);
         Progreso.setText(ipx);

@@ -50,6 +50,23 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/conf_tug_title"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorPrimaryDark"/>
+
+            <Spinner
+                android:id="@+id/spinnerLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:entries="@array/load" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/conf_id"
                 android:textSize="20dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
@@ -84,44 +101,6 @@
                 android:textSize="17dp"
                 android:textColorHint="@color/colorPrimary"
                 android:textColor="@color/colorPrimaryDark"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/conf_tug_title"
-                android:textSize="20dp"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/colorPrimaryDark"/>
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/conf_tug_chk1"
-                android:id="@+id/radioBtn1"
-                android:checked="false"
-                />
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/conf_tug_chk2"
-                android:id="@+id/radioBtn2"
-                android:checked="false"
-                />
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/conf_tug_chk3"
-                android:id="@+id/radioBtn3"
-                android:checked="false"
-                />
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/conf_tug_chk4"
-                android:id="@+id/radioBtn4"
-                android:checked="false"
                 />
 
             <Button

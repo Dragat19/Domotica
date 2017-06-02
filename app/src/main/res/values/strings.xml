@@ -53,4 +53,12 @@
     <string name="acerca_de_info_developer2">Tlf: +54 1135968008</string>
     <string name="acerca_de_info_developer3">Correo: Ing.albert.sanchez91@gmail.com</string>
 
+    <!-- Conjunto de Strings para el View GameSpinner -->
+    <string-array name="load">
+        <item>Cafetera</item>
+        <item>Microonda</item>
+        <item>TV</item>
+        <item>Otros</item>
+    </string-array>
+
 </resources>

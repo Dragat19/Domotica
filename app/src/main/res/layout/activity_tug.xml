@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/vinilo3"
-    android:padding="20dp"
+    android:padding="10dp"
     android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/settigs"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:background="@drawable/ajustes" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,12 +26,12 @@
 
     <ImageView
         android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:id="@+id/imageView_tv"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.50"
+        android:layout_weight="0.85"
         android:baselineAlignBottom="false"
-        android:src="@drawable/tvmed" />
+        android:src="@drawable/tug" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,7 +40,7 @@
         android:text="Apagado"
         android:id="@+id/status"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:textColor="#ffffff"
         android:textStyle="bold" />
 
@@ -41,7 +49,7 @@
         android:layout_height="100dp"
         android:id="@+id/toggleButton"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.10"
+        android:layout_weight="0.15"
         android:textColor="#ffffff"
         android:layout_marginTop="10dp"
         android:background="@drawable/toggle_sw"

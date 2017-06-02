@@ -7,13 +7,18 @@
     android:background="@drawable/vinilo3"
     android:padding="10dp">
 
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:src="@drawable/ajustes" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/title_luminaria"
-        android:layout_margin="2dp"
         android:textSize="20dp"
         android:layout_gravity="center"
         android:id="@+id/txt_lumi_name"
