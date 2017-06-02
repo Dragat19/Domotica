@@ -59,11 +59,8 @@ public class Config_Luminaria extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(Config_Luminaria.this, Control_luminaria.class);
-                intent.putExtra(LUMI1,Ubic1.getText().toString());
-                intent.putExtra(LUMI2,Ubic2.getText().toString());
-                intent.putExtra(LUMI3,Ubic3.getText().toString());
-                intent.putExtra(LUMI4,Ubic4.getText().toString());
                 startActivity(intent);
+                finish();
             }
         });
     }

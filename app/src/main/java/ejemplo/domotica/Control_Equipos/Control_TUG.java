@@ -93,8 +93,7 @@ public class Control_TUG extends AppCompatActivity implements Animation.Animatio
         }
 
         if (id.equals("") && xip.equals("")){
-            Status.setText("Apagado");
-
+            Status.setText("Error");
             showDialog(this);
         }
 

@@ -1,9 +1,14 @@
 package ejemplo.domotica.Control_Equipos;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.CompoundButton;
@@ -21,14 +26,15 @@ import static ejemplo.domotica.Config_Equipos.Config_Dimmer.NAME_PREF;
 /**
  * Created by levaa_000 on 12/14/2015.
  */
-public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
+public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, Animation.AnimationListener{
 
     private SeekBar Barra;
     private TextView Progreso,Nombre_dimmer,texto_Extra;
-    private ImageView Imag_dimmer;
+    private ImageView Imag_dimmer,settings;
     private WebView Web_dimmer;
     private ToggleButton toggle_btnon_off;
     private SharedPreferences pref;
+    private Animation animateBlink;
 
    
     @Override
@@ -41,6 +47,7 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
         texto_Extra=(TextView)findViewById(R.id.textV_extra);
         Nombre_dimmer=(TextView)findViewById(R.id.txt_nombre);
         Imag_dimmer=(ImageView)findViewById(R.id.imageView_dimmer);
+        settings=(ImageView)findViewById(R.id.settigs);
         Web_dimmer=(WebView)findViewById(R.id.webView_dimmer);
         toggle_btnon_off=(ToggleButton)findViewById(R.id.toggleBtn);
 
@@ -55,6 +62,9 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
 
         Nombre_dimmer.setText(idx);
         Progreso.setText(ipx);
+
+        animateBlink = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink);
+        animateBlink.setAnimationListener(this);
 
 
         Web_dimmer.setWebViewClient(new WebViewClient() {
@@ -87,6 +97,12 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
 
             }
         });
+
+        if (idx.equals("") && ipx.equals("")){
+            texto_Extra.setText("Error");
+            Nombre_dimmer.setText("Dimmer-Error");
+            showDialog(this);
+        }
 
 
     }
@@ -197,6 +213,22 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
 
     }
 
+    private void showDialog(Context context){
+        final AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+        dialog.setTitle("Error Configuracion");
+        dialog.setMessage("Necesitas introducir Id y Ip de tu dispositivo en Configuracion de Dimmer" );
+        dialog.setIcon(R.drawable.error);
+        dialog.setCancelable(false);
+        dialog.setPositiveButton("OK!",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialog.setCancelable(true);
+                settings.startAnimation(animateBlink);
+            }
+        });
+        dialog.create().show();
+    }
+
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
 
@@ -204,6 +236,23 @@ public class Control_Dimmer extends AppCompatActivity implements SeekBar.OnSeekB
 
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
+
+    }
+
+    @Override
+    public void onAnimationStart(Animation animation) {
+
+    }
+
+    @Override
+    public void onAnimationEnd(Animation animation) {
+        if (animation == animateBlink){
+
+        }
+    }
+
+    @Override
+    public void onAnimationRepeat(Animation animation) {
 
     }
 }
