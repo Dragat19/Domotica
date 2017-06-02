@@ -69,7 +69,7 @@ public class Control_Aire extends AppCompatActivity implements Animation.Animati
     public void showDialog(Context context){
         final AlertDialog.Builder dialog = new AlertDialog.Builder(context);
         dialog.setTitle("Error Configuracion");
-        dialog.setMessage("Necesitas introducir Id y Ip de tu dispositivo en Configuracion de Tug" );
+        dialog.setMessage("Necesitas introducir Id y Ip de tu dispositivo en Configuracion de Aire" );
         dialog.setIcon(R.drawable.error);
         dialog.setCancelable(false);
         dialog.setPositiveButton("OK!",new DialogInterface.OnClickListener() {

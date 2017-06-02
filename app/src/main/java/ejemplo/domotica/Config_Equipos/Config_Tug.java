@@ -112,8 +112,6 @@ public class Config_Tug extends AppCompatActivity implements AdapterView.OnItemS
         this.position = i;
         selection = adapterView.getItemAtPosition(position).toString();
 
-        /*Mostramos la selección actual del Spinner */
-        Toast.makeText(this,"Selección actual: "+selection,Toast.LENGTH_SHORT).show();
     }
 
     @Override
